@@ -1,29 +1,9 @@
-# .
 
-TODO: Write a gem description
+Simple Vagrant middleware which runs `librarian-puppet install` before
+each `vagrant up` and `vagrant provision`.
 
-## Installation
+It's up to you to make sure you have librarian puppet installed and
+available on your path. To use this just add the following to your
+Vagrantfile:
 
-Add this line to your application's Gemfile:
-
-    gem '.'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install .
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+    require 'librarian/puppet/vagrant'  
